@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import postRoutes from './routes/posts.js';
+import userRoutes from './routes/users.js'; 
 import dotenv from 'dotenv';
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({limit:"30mb",extended:true}));
 app.use(cors());
 
 app.use('/posts',postRoutes);
+app.use('/user',userRoutes);
 //connecting to mongoDB
 
 const MongoDB_URL = process.env.URL|| "mongodb://localhost:27017/MemoriesDB" ; 
