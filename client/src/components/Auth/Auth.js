@@ -94,7 +94,7 @@ handleShowPassword(false);
                         {isSignUp  ? 'Sign Up' : 'Sign In'}
                 </Button>
                 <GoogleLogin 
-                    clientId={process.env.GOOGLE_CLIENT_ID}
+                    clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
                     render = {(renderProps)=>(
                         <Button className={classes.googleButton} color='primary' fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon = {<Icon />} variant="contained">Google Sign In </Button>
                     )}
